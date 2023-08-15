@@ -1,0 +1,391 @@
+* {
+    font-weight: 100;
+  }
+  
+  body { 
+    margin: 0;
+    background-color: #F5F5F5;
+ }
+
+/*/////////////////////// Fundo ///////////////////////*/
+
+.right-div {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 40%; 
+    height: 380%;
+    background-color: #03178b; 
+    z-index: 1;  
+  }
+
+  .nomepag {
+    position: absolute;
+    top: 3%; 
+    left: 68%;
+    text-align: center; 
+    color: white;
+    font-family:sans-serif;
+    font-style: oblique;
+    font-size: 10px;
+    z-index: 2;
+  }
+
+  .linha-branca {
+    position: absolute;
+    top: 10%;
+    left: 66%;
+    z-index: 2;
+    width: 400px; 
+    height: 2px; 
+    background-color: white;
+  }
+
+/*//////////////////// Opções ///////////////////////*/
+
+.label-option {
+
+    font-family:'Times New Roman', Times, serif;
+    font-size: 18px;
+    color: #03178b;
+    cursor: pointer;
+    font-weight: 600;
+    left: 14%;
+    top: 60px;
+    padding: 35px;
+    position: relative;
+}
+
+.linha-azul {
+    position: absolute;
+    top: 17%;
+    left: 32%;
+    transform: translate(-50%, -50%);
+    width: 500px; 
+    height: 3px; 
+    background-color: #03178b;
+}
+  
+  /*//////////////////// Gestor ///////////////////////*/
+
+.info-container {
+    font-family: sans-serif;
+    color: #ffffff;
+    padding: 20px;
+    margin-top: 100px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 30px;
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+    background-color: #3c498f; 
+    position:absolute;
+    z-index: 2;
+    left: 62%;
+    width: 36%;;
+}
+  
+  .info-container h2 {
+    font-size: 20px;
+    color: #effffe ; 
+    margin-bottom: 5px;
+    text-align: center;
+    font-style: oblique; 
+}
+  
+  .linha-Gestor2 {
+    height: 2px;
+    background-color: #effffe; 
+    margin: 10px; 
+    margin-bottom: 30px;
+    width: 200px;
+    margin-left: 110px;
+  }
+  
+  .linha-Gestor1 {
+    height: 2px;
+    background-color: #effffe; 
+    margin: 10px; 
+    margin-bottom: 40px;
+    margin-top: 10px;
+    width: 350px;
+    margin-left: 40px;
+  }
+  
+  .plano-gestor-info {
+    margin: 10px 0;
+  }
+  
+  .plano-gestor-info p {
+    margin: 5px 0;
+    padding: 10px;
+  }
+  
+  .plano-gestor-info span {
+    color: #ffffff; 
+  }
+  
+  .info-container button {
+    background-color: #ffffff; 
+    color: #03178b ;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-family: sans-serif;
+    font-size: 16px;
+    border-radius: 5px;
+    margin-left: 147px;
+    margin-bottom: 15px;
+  }
+  
+  .info-container button:hover {
+    background-color: #cacfd1;
+    color: #03178b;
+  }
+
+
+
+  /*/////////////////// Cursos Lista CSS //////////////*/
+
+.CursosUni {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 130px;
+    margin-left: 25px;
+    max-width: 58%;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    position: absolute;
+  
+  }
+  
+  .Column {
+    width: 400px;
+    border: 1px solid #e0e0e0;
+    border-radius: 25px;
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    box-sizing: border-box;
+    justify-content: center; 
+    margin-top: 2%;
+    margin-right: 20px;
+    background-color: #ffffff; 
+   
+  }
+  
+  .Column input[type="text"] {
+    padding: 10px;
+    width: 95%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    color:black;
+  }
+  
+  .CoursesList {
+    list-style: none;
+    padding: 0;
+    margin-top: 4px;
+  }
+  
+  .CourseItem {
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 10px;
+    color:#000000;
+    height: 23px;
+  }
+  
+  .CourseItem:hover {
+    background-color: #f0f0f0;
+    cursor: pointer;
+  }
+  
+  .CursosUni p {
+    font-size: 16px;
+    margin-bottom: 20px;
+    color: #03178b;
+    font-style: oblique;
+    font-weight: 600;
+    margin-top: 0px;
+    text-align: center;
+  }
+  
+  /*/////////////////// Cursos  Resultado /////////////*/
+  
+  .custom-selected-courses {
+    font-family: sans-serif;
+    color: #ffffff;
+    padding: 20px;
+    position: inherit;
+    position: absolute;
+    top: -40px; 
+    right: -69%; 
+    width: 65%;
+    z-index: 2;
+  }
+  
+  .linha-curso {
+    height: 2px;
+    background-color: #effffe;
+    margin: 10px;
+    margin-bottom: 40px;
+    margin-top: 10px;
+    width: 250px;
+    margin-left: 130px;
+  }
+  
+  .SelectedCourses h2 {
+    font-size: 20px;
+    color: #effffe;
+    margin-bottom: 5px;
+    font-style: oblique;
+    margin-left: 160px;
+  }
+  
+  .SelectedCourses ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    
+  }
+  
+  .SelectedCourses li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 0;
+    border-bottom: 1px solid #ccc;
+    margin-left: 20px;
+    
+    
+   
+  }
+  
+  .SelectedCourses li:last-child {
+    border-bottom: none;
+  }
+  
+  .SelectedCourses button {
+    background-color: #ffffff;
+    color: #03178b;
+    border: none;
+    padding: 4px 8px;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  .SelectedCourses button:hover {
+    background-color: #cfcccc;
+  }
+  
+  .SelectedCourses p {
+    font-size: 18px;
+    color: #ffffff;
+    margin-top: 60px; 
+    margin-left: 30px; 
+    font-weight: 500;
+  }
+  
+  .share-button {
+    background-color: #ffffff; 
+    color: #03178b ;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-family: sans-serif;
+    font-size: 16px;
+    border-radius: 5px;
+    margin-left: 190px;
+    margin-bottom: 15px;
+    height: 40px;
+    margin-top: -3px;
+    width: 130px;
+  }
+  
+  .share-button:hover {
+    background-color: #cfcccc;
+  }
+
+
+  /*/////////////////// Combos /////////////*/
+
+
+ 
+.CombosContainer {
+  margin-top: 11.5%;
+  border: 1px solid #ccc;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 5px;
+  width: 40%;
+  margin-left: 9%;
+  text-align: center; 
+  font-family: sans-serif;
+  border-radius: 25px;
+
+}
+
+
+.CombosContainer p {
+  font-size: 16px;
+  font-weight: bold;
+  margin-top: 10px;
+  text-align: center;
+  color: #03178b;
+}
+
+
+.CombosContainer label {
+  margin-top: 5px;
+  display: inline-block;
+
+}
+
+
+.CombosContainer p:last-child {
+  margin-top: 20px;
+}
+
+
+.CombosContainer label input[type="checkbox"] {
+  margin-right: 5px;
+}
+
+
+.SelectedProducts {
+  margin-top: 20px;
+}
+
+.SelectedProducts h2 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.SelectedProducts ul {
+  list-style: none;
+  padding: 0;
+}
+
+.SelectedProducts li {
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+.SelectedProducts button {
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+
+.share-button {
+  background-color: #3498db;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 20px;
+}

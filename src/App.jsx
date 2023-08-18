@@ -1,5 +1,6 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './index.css';
+import Combos from './assets/combos';
 
 
      {/* Opção Cursos unitários */}
@@ -109,15 +110,13 @@ function App() {
   const [selectedCourseNames, setSelectedCourseNames] = useState([]);
   const [totalPrice, setTotalPrice] = useState(0);
   const [selectedCourseCount, setSelectedCourseCount] = useState(0);
-  const [isSchoolPhysical, setIsSchoolPhysical] = useState(false);
-  const [selectedHabitants, setSelectedHabitants] = useState(null);
-  const [isExclusivePlaza, setIsExclusivePlaza] = useState(false);
-  const [selectedProducts, setSelectedProducts] = useState([]);
-
 
   const handleOptionClick = (option) => {
     setSelectedOption(option);
+  
+{/*///////////////////////// Combos /////////////////////*/}
 
+    
 
 {/*///////////////////////// Gestor /////////////////////*/}
 
@@ -136,6 +135,8 @@ function App() {
   };
 
 {/*///////////////////////// Opções /////////////////////*/}
+
+
 
     const courses20 = coursesData.filter(course =>
       course.price === 20 && course.name.toLowerCase().includes(searchTerm20.toLowerCase())
@@ -167,13 +168,12 @@ function App() {
 
     };
 
-    const handleProductSelect = (productName) => {
-      if (selectedProducts.includes(productName)) {
-        setSelectedProducts(selectedProducts.filter(name => name !== productName));
-      } else {
-        setSelectedProducts([...selectedProducts, productName]);
-      }
-    };
+    let componentToRender = null;
+
+    if (selectedOption === 'opcao3') {
+      componentToRender = <Combos />;
+    }
+    
 
     return (
       <div className='Selecao-container'>
@@ -301,128 +301,7 @@ function App() {
             </div>
           )}
     
-{/*///////////////////////// Combos /////////////////////*/}
-
-        {selectedOption === 'opcao3' && (
-          <div className='CombosContainer'>
-            <p>Possui uma escola física?</p>
-            <label>
-              <input
-                type='radio'
-                name='physicalSchool'
-                checked={isSchoolPhysical}
-                onChange={() => setIsSchoolPhysical(true)}
-              />
-              Sim
-            </label>
-            <label>
-              <input
-                type='radio'
-                name='physicalSchool'
-                checked={!isSchoolPhysical}
-                onChange={() => setIsSchoolPhysical(false)}
-              />
-              Não
-            </label>
-            <p>Quantos habitantes a cidade possui?</p>
-            <label>
-              <input
-                type='radio'
-                name='habitants'
-                checked={selectedHabitants === 'option1'}
-                onChange={() => setSelectedHabitants('option1')}
-              />
-              51.000 ou mais
-            </label>
-            <label>
-              <input
-                type='radio'
-                name='habitants'
-                checked={selectedHabitants === 'option2'}
-                onChange={() => setSelectedHabitants('option2')}
-              />
-              Até 50.000 H
-            </label>
-            <label>
-              <input
-                type='radio'
-                name='habitants'
-                checked={selectedHabitants === 'option3'}
-                onChange={() => setSelectedHabitants('option3')}
-              />
-              Até 30.000 H
-            </label>
-            <label>
-              <input
-                type='radio'
-                name='habitants'
-                checked={selectedHabitants === 'option4'}
-                onChange={() => setSelectedHabitants('option4')}
-              />
-              Até 10.000 H
-            </label>
-            <p>É uma praça exclusiva?</p>
-        <label>
-          <input
-            type='radio'
-            name='exclusivePlaza'
-            checked={isExclusivePlaza}
-            onChange={() => setIsExclusivePlaza(true)}
-          />
-          Sim
-        </label>
-        <label>
-          <input
-            type='radio'
-            name='exclusivePlaza'
-            checked={!isExclusivePlaza}
-            onChange={() => setIsExclusivePlaza(false)}
-          />
-          Não
-        </label>
-        <p>Qual produto irá adquirir?</p>
-        <label>
-          <input
-            type='checkbox'
-            name='product'
-            checked={selectedProducts.includes('Ouro Moderno Presencial')}
-            onChange={() => handleProductSelect('Ouro Moderno Presencial')}
-          />
-          Ouro Moderno Presencial
-        </label>
-        <label>
-          <input
-            type='checkbox'
-            name='product'
-            checked={selectedProducts.includes('Online')}
-            onChange={() => handleProductSelect('Online')}
-          />
-          Online
-        </label>
-        <label>
-          <input
-            type='checkbox'
-            name='product'
-            checked={selectedProducts.includes('NR')}
-            onChange={() => handleProductSelect('NR')}
-          />
-          NR
-        </label>
-        <label>
-          <input
-            type='checkbox'
-            name='product'
-            checked={selectedProducts.includes('Inglês')}
-            onChange={() => handleProductSelect('Inglês')}
-          />
-          Inglês
-        </label>
-      </div>
-    )}
-    
-
-
-
+    {componentToRender} 
 
       </div>
     );

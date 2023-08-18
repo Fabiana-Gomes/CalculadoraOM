@@ -317,27 +317,31 @@
   padding: 20px;
   background-color: #ffffff;
   border-radius: 5px;
-  width: 40%;
-  margin-left: 9%;
-  text-align: center; 
+  width: 45%;
+  margin-left: 6%;
   font-family: sans-serif;
   border-radius: 25px;
+  text-align: center;
 
 }
 
 
 .CombosContainer p {
-  font-size: 16px;
-  font-weight: bold;
-  margin-top: 10px;
-  text-align: center;
+  font-size: 18px;
+  margin-top: 30px;
   color: #03178b;
+  margin-bottom: 7px;
+  font-style: oblique;
+
 }
 
 
 .CombosContainer label {
   margin-top: 5px;
   display: inline-block;
+  padding: 4px;
+  color: #03178b;
+  margin-bottom: 60px;
 
 }
 
@@ -371,21 +375,39 @@
   margin-bottom: 5px;
 }
 
-.SelectedProducts button {
-  background-color: #e74c3c;
-  color: white;
-  border: none;
-  padding: 5px 10px;
-  cursor: pointer;
+.linha-01 {
+  position: absolute;
+  top: 49%;
+  left: 14%;
+  z-index: 2;
+  width: 400px; 
+  height: 1px; 
+  background-color:#ccc;
+  ;
 }
 
+.linha-02 {
+  position: absolute;
+  top: 73%;
+  left: 14%;
+  z-index: 2;
+  width: 400px;  
+  height: 1px; 
+  background-color:#ccc;
+  ;
+}
 
-.share-button {
-  background-color: #3498db;
-  color: white;
-  border: none;
-  padding: 10px 20px;
-  font-size: 16px;
-  cursor: pointer;
-  margin-top: 20px;
+.linha-03 {
+  position: absolute;
+  top: 95%;
+  left: 14%;
+  z-index: 2;
+  width: 400px; 
+  height: 1px; 
+  background-color:#ccc;
+  
+}
+
+.PropostaContainer{
+  z-index: 2;
 }

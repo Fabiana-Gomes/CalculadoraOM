@@ -2,9 +2,22 @@ import React, { useState } from 'react';
 
 function combos() {
     const [escolaFisica, setEscolaFisica] = useState('');
+    const [habitantes, setHabitantes] = useState('');
+    const [showMessages, setShowMessages] = useState(false);
 
     const handleEscolaFisicaChange = (event) => {
         setEscolaFisica(event.target.value);
+        // Reset the habitantes selection when escolaFisica changes
+        setHabitantes('');
+        setShowMessages(false);
+    };
+
+    const handleHabitantesChange = (event) => {
+        const selectedHabitantes = event.target.value;
+        setHabitantes(selectedHabitantes);
+
+        // Set showMessages to true only if "Até 10.000" is selected
+        setShowMessages(selectedHabitantes === 'Até 10.000');
     };
 
     return (
@@ -29,19 +42,54 @@ function combos() {
 
             <div className='linha-01'></div>
 
+         
             <p>Quantos habitantes tem a cidade?</p>
             <label>
-                <input type="radio" name="habitantes" value="Até 10.000" /> Até 10.000
+                <input
+                    type="radio"
+                    name="habitantes"
+                    value="Até 10.000"
+                    onChange={handleHabitantesChange}
+                /> Até 10.000
             </label>
             <label>
-                <input type="radio" name="habitantes" value="Até 30.000" /> Até 30.000
+                <input
+                    type="radio"
+                    name="habitantes"
+                    value="Até 30.000"
+                    onChange={handleHabitantesChange}
+                /> Até 30.000
             </label>
             <label>
-                <input type="radio" name="habitantes" value="Até 50.000" /> Até 50.000
+                <input
+                    type="radio"
+                    name="habitantes"
+                    value="Até 50.000"
+                    onChange={handleHabitantesChange}
+                /> Até 50.000
             </label>
             <label>
-                <input type="radio" name="habitantes" value="51.000+" /> 51.000+
+                <input
+                    type="radio"
+                    name="habitantes"
+                    value="51.000+"
+                    onChange={handleHabitantesChange}
+                /> 51.000+
             </label>
+
+            {showMessages && habitantes === 'Até 10.000' && (
+                <>
+                    <div className='linha-02'></div>
+                    <div className='nao10'>
+                    <div className='linha-10'></div>
+                    <h1>Plano sem escola física</h1>
+                    <p>Taxa de adesão:   R$ 499,00</p>
+                    <p>Sem exclusividade de praça</p>
+                    <p>Será cobrado valor de R$ 8,99 por curso e R$ 17,99 por curso de inglês</p>
+                    </div>
+                </>
+            )}
+
 
             {escolaFisica === 'Sim' && (
                 <>

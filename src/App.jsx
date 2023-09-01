@@ -289,7 +289,7 @@ function App() {
           <ul>
             {selectedCourseNames.map((courseName, index) => (
               <li key={index}>
-                {courseName} <button onClick={() => handleCourseRemove(courseName)}>-</button>
+                {courseName} <button onClick={() => handleCourseRemove(courseName)}>x</button>
               </li>
             ))}
           </ul>

@@ -310,121 +310,122 @@
   /*/////////////////// Combos /////////////*/
 
 
- 
-.CombosContainer {
-  margin-top: 11.5%;
-  border: 1px solid #ccc;
-  padding: 20px;
-  background-color: #ffffff;
-  border-radius: 5px;
-  width: 45%;
-  margin-left: 6%;
-  font-family: sans-serif;
-  border-radius: 25px;
-  text-align: center;
-
-}
-
-
-.CombosContainer p {
-  font-size: 18px;
-  margin-top: 30px;
-  color: #03178b;
-  margin-bottom: 7px;
-  font-style: oblique;
-
-}
-
-
-.CombosContainer label {
-  margin-top: 5px;
-  display: inline-block;
-  padding: 4px;
-  color: #03178b;
-  margin-bottom: 60px;
-
-}
-
-
-.CombosContainer p:last-child {
-  margin-top: 20px;
-}
-
-
-.CombosContainer label input[type="checkbox"] {
-  margin-right: 5px;
-}
-
-
-.SelectedProducts {
-  margin-top: 20px;
-}
-
-.SelectedProducts h2 {
-  font-size: 18px;
-  margin-bottom: 10px;
-}
-
-.SelectedProducts ul {
-  list-style: none;
-  padding: 0;
-}
-
-.SelectedProducts li {
-  font-size: 14px;
-  margin-bottom: 5px;
-}
-
-.linha-01 {
-  position: absolute;
-  top: 49%;
-  left: 14%;
-  z-index: 2;
-  width: 400px; 
-  height: 1px; 
-  background-color:#ccc;
-  ;
-}
-
-.linha-02 {
-  position: absolute;
-  top: 73%;
-  left: 14%;
-  z-index: 2;
-  width: 400px;  
-  height: 1px; 
-  background-color:#ccc;
-  ;
-}
-
-.linha-03 {
-  position: absolute;
-  top: 95%;
-  left: 14%;
-  z-index: 2;
-  width: 400px; 
-  height: 1px; 
-  background-color:#ccc;
+  .CombosContainer {
+    margin-top: 11.5%;
+    border: 1px solid #ccc;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 5px;
+    width: 45%;
+    margin-left: 6%;
+    font-family: sans-serif;
+    border-radius: 25px;
+    text-align: center;
+    
   
-}
+  }
+  
+  
+  .CombosContainer p {
+    font-size: 18px;
+    margin-top: 30px;
+    color: #03178b;
+    margin-bottom: 7px;
+    font-style: oblique;
+  
+  }
+  
+  
+  .CombosContainer label {
+    margin-top: 5px;
+    display: inline-block;
+    padding: 4px;
+    color: #03178b;
+    margin-bottom: 22px;
+  
+  }
+  
+  
+  .CombosContainer p:last-child {
+    margin-top: 20px;
+  }
+  
+  
+  .CombosContainer label input[type="checkbox"] {
+    margin-right: 5px;
+  }
+  
+  
+  .SelectedProducts {
+    margin-top: 20px;
+  }
+  
+  .SelectedProducts h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  
+  .SelectedProducts ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .SelectedProducts li {
+    font-size: 14px;
+    margin-bottom: 5px;
+  }
+  
+  .linha-01 {
+    position: absolute;
+    top: 46%;
+    left: 21%;
+    z-index: 2;
+    width: 250px; 
+    height: 1px; 
+    background-color:#ccc;
+    ;
+  }
+  
+  .linha-02 {
+    position: absolute;
+    top: 64%;
+    left: 19%;
+    z-index: 2;
+    width: 300px;  
+    height: 1px; 
+    background-color:#ccc;
+    ;
+  }
+  
+  .linha-03 {
+    position: absolute;
+    top: 80%;
+    left: 20%;
+    z-index: 2;
+    width: 250px; 
+    height: 1px; 
+    background-color:#ccc;
+    
+  }
 
 
+  /*/////////////////// Não10k/30k/50k/51+ /////////////*/
 
 .nao10 {
 
   font-family: sans-serif;
   color: #ffffff;
   padding: 20px;
-  margin-top: -368px;
   box-sizing: border-box;
   border: 1px solid #ccc;
   border-radius: 30px;
   box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
   background-color: #3c498f; 
-  position:absolute;
   z-index: 2;
   left: 62%;
-  width: 36%;;
+  width: 36%;
+  top: 18%;
+  position:absolute;
   
 }
 
@@ -435,15 +436,13 @@
   text-align: left;
   font-style: normal;
   font-size: 16px;
-  margin-top: 38px;
-  
   
 }
 
 .nao10 h1 {
   font-size: 20px;
   color: #ffffff ; 
-  margin-bottom: 5px;
+  margin-bottom: 50px;
   text-align: center;
   font-style: oblique; 
 
@@ -451,7 +450,7 @@
 
 .linha-10 {
   position: absolute;
-  top: 25%;
+  top: 15%;
   left: 22%;
   z-index: 2;
   width: 250px; 
@@ -459,3 +458,112 @@
   background-color:#ffffff;
   
 }
+
+.linha-04 {
+  position: inherit;
+  z-index: 2;
+  width: 350px; 
+  height: 2px; 
+  background-color:#ffffff;
+  top: 74% ;
+  left: 12%;
+}
+
+.botao-compartilhar {
+    background-color: #ffffff; 
+    color: #03178b ;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-family: sans-serif;
+    font-size: 16px;
+    border-radius: 5px;
+    margin-left: 10px;
+    margin-top: 50px;
+    margin-bottom: 15px;
+    }
+
+.botao-compartilhar:hover {
+  background-color: #cacfd1;
+  color: #03178b;
+}
+
+  /*/////////////////// Sim Combo 10k/30k/50k/51+ /////////////*/
+
+  .simcombo1 {
+
+    font-family: sans-serif;
+    color: #ffffff;
+    padding: 20px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 30px;
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+    background-color: #3c498f; 
+    z-index: 2;
+    left: 62%;
+    width: 36%;
+    top: 18%;
+    position:absolute;
+    
+  }
+  
+  .simcombo1 p {
+  
+    font-family: sans-serif;
+    color: #ffffff;
+    text-align: left;
+    font-style: normal;
+    font-size: 17px;
+    margin-bottom: -12px;
+    
+  }
+  
+  .simcombo1 h1 {
+    font-size: 20px;
+    color: #ffffff ; 
+    margin-bottom: 50px;
+    text-align: center;
+    font-style: oblique; 
+  }
+  
+  .linha-15 {
+    position: absolute;
+    top: 12.5%;
+    left: 12%;
+    z-index: 2;
+    width: 350px; 
+    height: 2px; 
+    background-color:#ffffff;
+    
+  }
+  
+  .linha-16 {
+    position: inherit;
+    z-index: 2;
+    width: 350px; 
+    height: 2px; 
+    background-color:#ffffff;
+    top: 79% ;
+    left: 12%;
+  }
+  
+  .botao-compartilhar {
+      background-color: #ffffff; 
+      color: #03178b ;
+      border: none;
+      padding: 10px 20px;
+      cursor: pointer;
+      font-family: sans-serif;
+      font-size: 16px;
+      border-radius: 5px;
+      margin-left: 10px;
+      margin-top: 70px;
+      margin-bottom: 15px;
+      }
+  
+  .botao-compartilhar:hover {
+    background-color: #cacfd1;
+    color: #03178b;
+  }
+

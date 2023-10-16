@@ -86,7 +86,7 @@
   
   .info-container h2 {
     font-size: 20px;
-    color: #effffe ; 
+    color: #ffffff ; 
     margin-bottom: 5px;
     text-align: center;
     font-style: oblique; 
@@ -236,7 +236,7 @@
   
   .SelectedCourses h2 {
     font-size: 20px;
-    color: #effffe;
+    color: #ffff;
     margin-bottom: 5px;
     font-style: oblique;
     margin-left: 160px;
@@ -309,11 +309,10 @@
 
   /*/////////////////// Combos /////////////*/
 
-
-  .CombosContainer {
-    margin-top: 11.5%;
+  .combos-container {
+    margin-top: 10%;
     border: 1px solid #ccc;
-    padding: 20px;
+    padding: 30px;
     background-color: #ffffff;
     border-radius: 5px;
     width: 45%;
@@ -321,155 +320,101 @@
     font-family: sans-serif;
     border-radius: 25px;
     text-align: center;
+    align-items: flex-start;
+  }
+  
+  button {
+    background-color: #fff;
+    border: 1px solid #03178b;
+    border-radius: 5px;
+    padding: 10px;
+    margin-right: 13px;
+    cursor: pointer;
+    margin-top: 10px;
+    margin-bottom: 20px;
     
-  
+    
   }
   
-  
-  .CombosContainer p {
-    font-size: 18px;
-    margin-top: 30px;
+  button.selected {
+    background-color: #03178b;
+    color: #fff;
+    border-color: #03178b;
+  }
+
+  .combos-h1 {
+    font-size: 20px;
+    margin-bottom: 30px;
     color: #03178b;
-    margin-bottom: 7px;
-    font-style: oblique;
-  
+    font-weight: 600;
+    margin-top: 10px;
+    text-align: center
   }
-  
-  
-  .CombosContainer label {
-    margin-top: 5px;
-    display: inline-block;
-    padding: 4px;
-    color: #03178b;
-    margin-bottom: 22px;
-  
-  }
-  
-  
-  .CombosContainer p:last-child {
-    margin-top: 20px;
-  }
-  
-  
-  .CombosContainer label input[type="checkbox"] {
-    margin-right: 5px;
-  }
-  
-  
-  .SelectedProducts {
-    margin-top: 20px;
-  }
-  
-  .SelectedProducts h2 {
-    font-size: 18px;
+
+  .combos-container p {
+    font-size: 15px;
     margin-bottom: 10px;
-  }
-  
-  .SelectedProducts ul {
-    list-style: none;
-    padding: 0;
-  }
-  
-  .SelectedProducts li {
-    font-size: 14px;
-    margin-bottom: 5px;
-  }
-  
-  .linha-01 {
-    position: absolute;
-    top: 46%;
-    left: 21%;
-    z-index: 2;
-    width: 250px; 
-    height: 1px; 
-    background-color:#ccc;
-    ;
-  }
-  
-  .linha-02 {
-    position: absolute;
-    top: 64%;
-    left: 19%;
-    z-index: 2;
-    width: 300px;  
-    height: 1px; 
-    background-color:#ccc;
-    ;
-  }
-  
-  .linha-03 {
-    position: absolute;
-    top: 80%;
-    left: 20%;
-    z-index: 2;
-    width: 250px; 
-    height: 1px; 
-    background-color:#ccc;
-    
+    color: #03178b;
+    font-style: oblique;
+    font-weight: 600;
+    margin-top: 10px;
+    text-align: center
   }
 
+   /*/////////////////// Combos Resultado /////////////*/
 
-  /*/////////////////// Não10k/30k/50k/51+ /////////////*/
-
-.nao10 {
-
-  font-family: sans-serif;
-  color: #ffffff;
+ .mensagem {
+  position: inherit;
+  position: relative;
   padding: 20px;
   box-sizing: border-box;
   border: 1px solid #ccc;
   border-radius: 30px;
-  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
-  background-color: #3c498f; 
+  background-color: #3c498f;
+  color: #ffffff;
   z-index: 2;
   left: 62%;
   width: 36%;
-  top: 18%;
-  position:absolute;
-  
+  top: -577px;
+  height: 50%; 
+  font-family:sans-serif;
 }
 
-.nao10 p {
-
-  font-family: sans-serif;
-  color: #ffffff;
-  text-align: left;
-  font-style: normal;
+.mensagem p{
   font-size: 16px;
-  
-}
-
-.nao10 h1 {
-  font-size: 20px;
   color: #ffffff ; 
-  margin-bottom: 50px;
+  margin-bottom: 5px;
   text-align: center;
-  font-style: oblique; 
-
+  text-align: left;
+  padding-top: 10px;  
 }
 
-.linha-10 {
-  position: absolute;
-  top: 15%;
-  left: 22%;
-  z-index: 2;
-  width: 250px; 
-  height: 2px; 
-  background-color:#ffffff;
-  
-}
+  .Linha-combos2{
+    height: 2px;
+    background-color:#effffe; 
+    width: 80%;
+    margin-left: 12%;
+    margin-top: 20px;
+    margin-bottom: 30px;
+  }
 
-.linha-04 {
-  position: inherit;
-  z-index: 2;
-  width: 350px; 
-  height: 2px; 
-  background-color:#ffffff;
-  top: 74% ;
-  left: 12%;
-}
+  .Linha-combos{
+    height: 2px;
+    background-color:#effffe; 
+    width: 65%;
+    margin-left: 17%;
+    margin-top: -15px; 
+  }
 
-.botao-compartilhar {
+  .mensagem h1{
+    font-size: 20px;
+    color: #ffffff ; 
+    margin-bottom: 25px;
+    text-align: center;
+    font-style: oblique;
+  }
+
+  .botãocombos {
     background-color: #ffffff; 
     color: #03178b ;
     border: none;
@@ -478,92 +423,15 @@
     font-family: sans-serif;
     font-size: 16px;
     border-radius: 5px;
-    margin-left: 10px;
-    margin-top: 50px;
+    margin-left: 147px;
     margin-bottom: 15px;
-    }
+  }
 
-.botao-compartilhar:hover {
-  background-color: #cacfd1;
-  color: #03178b;
-}
-
-  /*/////////////////// Sim Combo 10k/30k/50k/51+ /////////////*/
-
-  .simcombo1 {
-
-    font-family: sans-serif;
-    color: #ffffff;
-    padding: 20px;
-    box-sizing: border-box;
-    border: 1px solid #ccc;
-    border-radius: 30px;
-    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
-    background-color: #3c498f; 
-    z-index: 2;
-    left: 62%;
-    width: 36%;
-    top: 18%;
-    position:absolute;
-    
-  }
-  
-  .simcombo1 p {
-  
-    font-family: sans-serif;
-    color: #ffffff;
-    text-align: left;
-    font-style: normal;
-    font-size: 17px;
-    margin-bottom: -12px;
-    
-  }
-  
-  .simcombo1 h1 {
-    font-size: 20px;
-    color: #ffffff ; 
-    margin-bottom: 50px;
-    text-align: center;
-    font-style: oblique; 
-  }
-  
-  .linha-15 {
-    position: absolute;
-    top: 12.5%;
-    left: 12%;
-    z-index: 2;
-    width: 350px; 
-    height: 2px; 
-    background-color:#ffffff;
-    
-  }
-  
-  .linha-16 {
-    position: inherit;
-    z-index: 2;
-    width: 350px; 
-    height: 2px; 
-    background-color:#ffffff;
-    top: 79% ;
-    left: 12%;
-  }
-  
-  .botao-compartilhar {
-      background-color: #ffffff; 
-      color: #03178b ;
-      border: none;
-      padding: 10px 20px;
-      cursor: pointer;
-      font-family: sans-serif;
-      font-size: 16px;
-      border-radius: 5px;
-      margin-left: 10px;
-      margin-top: 70px;
-      margin-bottom: 15px;
-      }
-  
-  .botao-compartilhar:hover {
+  .botãocombos:hover {
     background-color: #cacfd1;
     color: #03178b;
   }
 
+  .Linha-combos + p {
+    margin-top: 30px;
+  }

@@ -7,9 +7,11 @@ function combos() {
     pergunta3: "",
     pergunta4: [],
   });
-
+  const [ouroModernoPresencialSelecionado, setOuroModernoPresencialSelecionado] = useState(false);
+  const [nrDesabilitado, setNrDesabilitado] = useState(true);
+  const [inglesDesabilitado, setInglesDesabilitado] = useState(true);
+  
   /*///////////////// Respostas para Sim é escola física ////////////////*/
-
 
   function determinarMensagem() {
     const { pergunta1, pergunta2, pergunta3, pergunta4 } = opcoesSelecionadas;  
@@ -39,6 +41,7 @@ function combos() {
         </>
       );
   }
+  
   else if (
     pergunta1 === "Sim" &&
     pergunta2 === "Até 10.000" &&
@@ -109,7 +112,6 @@ else if (
     </>
   );
 }
-
 else if (
   pergunta1 === "Sim" &&
   pergunta2 === "Até 10.000" &&
@@ -250,17 +252,17 @@ else if (
   }
   else if (
     pergunta1 === "Sim" &&
-    pergunta2 === "Até 30.000" &&
+    pergunta2 === "Até 10.000" &&
     pergunta3 === "Sim" &&
-    pergunta4.includes("Ouro Moderno Presencial")
+    pergunta4.includes("Online") 
   ) { 
     return (
       <>
-      <h1>Proposta Taylor 30.000 habitantes</h1>
+      <h1>Proposta Taylor 10.000 habitantes</h1>
       <div className="Linha-combos"></div>
-      <p>Ouro Moderno Presencial: R$ 399,00.</p>
-      <p>Exclusividade: R$ 149,00.</p>
-      <p>Total: R$ 548,00.</p>
+      <p>Ouro Moderno Digital: R$ 99,00.</p>
+      <p>Exclusividade: O plano não inclui direito a exclusividade.</p>
+      <p>Total: R$ 99,00.</p>
       <div className="Linha-combos2"></div>
       <button className="botãocombos">Compartilhar</button>
       </>
@@ -268,19 +270,233 @@ else if (
   }
   else if (
     pergunta1 === "Sim" &&
-    pergunta2 === "Até 30.000" &&
-    pergunta3 === "Não" &&
-    pergunta4.includes("Ouro Moderno Presencial")
+    pergunta2 === "Até 50.000" &&
+    pergunta3 === "Sim" &&
+    pergunta4.includes("Ouro Moderno Presencial") &&
+    pergunta4.includes("Online") &&
+    pergunta4.includes("NR") &&
+    pergunta4.includes("Inglês")
   ) { 
     return (
       <>
-      <h1>Proposta Taylor 30.000 habitantes</h1>
+      <h1>Proposta combo 50.000 habitantes</h1>
       <div className="Linha-combos"></div>
-      <p>Ouro Moderno Presencial: R$ 399,00.</p>
+      <p>Ouro Moderno Presencial: R$ 599,00.</p>
+      <p>Cursos Online: R$ 349,00.</p>
+      <p>Cursos de Inglês: R$ 349,00.</p>
+      <p>Cursos de NR's: R$ 349,00.</p>
+      <p>Total: R$ 1.696,00.</p>
+      <p>Desconto Habitantes: 50% de desconto.</p>
       <p>Exclusividade: O plano não inclui direito a exclusividade.</p>
-      <p>Total: R$ 399,00.</p>
+      <p>Total com desconto: R$ 799,00.</p>
       <div className="Linha-combos2"></div>
       <button className="botãocombos">Compartilhar</button>
+      </>
+    );
+} 
+else if (
+  pergunta1 === "Sim" &&
+  pergunta2 === "Até 50.000" &&
+  pergunta3 === "Não" &&
+  pergunta4.includes("Ouro Moderno Presencial") &&
+  pergunta4.includes("Online") &&
+  pergunta4.includes("NR") &&
+  pergunta4.includes("Inglês")
+) { 
+  return (
+    <>
+    <h1>Proposta combo 50.000 habitantes</h1>
+    <div className="Linha-combos"></div>
+    <p>Ouro Moderno Presencial: R$ 599,00.</p>
+    <p>Cursos Online: R$ 349,00.</p>
+    <p>Cursos de Inglês: R$ 349,00.</p>
+    <p>Cursos de NR's: R$ 349,00.</p>
+    <p>Total: R$ 1.696,00.</p>
+    <p>Desconto Habitantes: 50% de desconto.</p>
+    <p>Exclusividade: R$ 199,00.</p>
+    <p>Total com desconto: R$ 998,00.</p>
+    <div className="Linha-combos2"></div>
+    <button className="botãocombos">Compartilhar</button>
+    </>
+  );
+} 
+  else if (
+    pergunta1 === "Sim" &&
+    pergunta2 === "Até 50.000" &&
+    pergunta3 === "Sim" &&
+    pergunta4.includes("Online") &&
+    pergunta4.includes("Ouro Moderno Presencial") &&
+    pergunta4.includes("NR")
+  ) {
+    return (
+      <>
+        <h1>Proposta Taylor até 50.000 habitantes</h1>
+        <div className="Linha-combos"></div>
+        <p>Ouro Moderno Presencial online: R$ 499,00.</p>
+        <p>Cursos Online: R$ 299,00.</p>
+        <p>Cursos NR: R$ 299,00.</p>
+        <p>Exclusividade: R$ 199,00.</p>
+        <p>Total: R$ 1.296,00.</p>
+        <div className="Linha-combos2"></div>
+        <button className="botãocombos">Compartilhar</button>
+      </>
+    );
+  }
+  else if (
+    pergunta1 === "Sim" &&
+    pergunta2 === "Até 50.000" &&
+    pergunta3 === "Não" &&
+    pergunta4.includes("Online") &&
+    pergunta4.includes("Ouro Moderno Presencial") &&
+    pergunta4.includes("NR")
+  ) {
+    return (
+      <>
+        <h1>Proposta Taylor até 50.000 habitantes</h1>
+        <div className="Linha-combos"></div>
+        <p>Ouro Moderno Presencial online: R$ 499,00.</p>
+        <p>Cursos Online: R$ 299,00.</p>
+        <p>Cursos NR: R$ 299,00.</p>
+        <p>Exclusividade: O plano não inclui direito a exclusividade.</p>
+        <p>Total: R$ 1.097,00.</p>
+        <div className="Linha-combos2"></div>
+        <button className="botãocombos">Compartilhar</button>
+      </>
+    );
+  }
+  else if (
+    pergunta1 === "Sim" &&
+    pergunta2 === "+ 51.000" &&
+    pergunta3 === "Não" &&
+    pergunta4.includes("Ouro Moderno Presencial") &&
+    pergunta4.includes("Online") &&
+    pergunta4.includes("NR") &&
+    pergunta4.includes("Inglês")
+  ) { 
+    return (
+      <>
+      <h1>Proposta combo +51.000 habitantes</h1>
+      <div className="Linha-combos"></div>
+      <p>Ouro Moderno Presencial: R$ 699,00.</p>
+      <p>Cursos Online: R$ 399,00.</p>
+      <p>Cursos de Inglês: R$ 399,00.</p>
+      <p>Cursos de NR's: R$ 399,00.</p>
+      <p>Total: R$ 1.896,00.</p>
+      <p>Desconto Habitantes: 50% de desconto.</p>
+      <p>Exclusividade: O plano não inclui direito a exclusividade.</p>
+      <p>Total com desconto: R$ 899,00.</p>
+      <div className="Linha-combos2"></div>
+      <button className="botãocombos">Compartilhar</button>
+      </>
+    );
+  } 
+  else if (
+    pergunta1 === "Sim" &&
+    pergunta2 === "+ 51.000" &&
+    pergunta3 === "Sim" &&
+    pergunta4.includes("Ouro Moderno Presencial") &&
+    pergunta4.includes("Online") &&
+    pergunta4.includes("NR") &&
+    pergunta4.includes("Inglês")
+  ) { 
+    return (
+      <>
+      <h1>Proposta combo +51.000 habitantes</h1>
+      <div className="Linha-combos"></div>
+      <p>Ouro Moderno Presencial: R$ 699,00.</p>
+      <p>Cursos Online: R$ 399,00.</p>
+      <p>Cursos de Inglês: R$ 399,00.</p>
+      <p>Cursos de NR's: R$ 399,00.</p>
+      <p>Total: R$ 1.896,00.</p>
+      <p>Desconto Habitantes: 50% de desconto.</p>
+      <p>Exclusividade: O plano não inclui direito a exclusividade.</p>
+      <p>Total com desconto: R$ 899,00.</p>
+      <div className="Linha-combos2"></div>
+      <button className="botãocombos">Compartilhar</button>
+      </>
+    );
+  } 
+  else if (
+    pergunta1 === "Sim" &&
+    pergunta2 === "+ 51.000" &&
+    pergunta3 === "Sim" &&
+    pergunta4.includes("Online") &&
+    pergunta4.includes("Ouro Moderno Presencial") &&
+    pergunta4.includes("NR")
+  ) {
+    return (
+      <>
+        <h1>Proposta Taylor +51.000 habitantes</h1>
+        <div className="Linha-combos"></div>
+        <p>Ouro Moderno Presencial online: R$ 599,00.</p>
+        <p>Cursos Online: R$ 399,00.</p>
+        <p>Cursos NR: R$ 399,00.</p>
+        <p>Exclusividade: O plano não inclui direito a exclusividade.</p>
+        <p>Total: R$ 1.397,00.</p>
+        <div className="Linha-combos2"></div>
+        <button className="botãocombos">Compartilhar</button>
+      </>
+    );
+  }
+  else if (
+    pergunta1 === "Sim" &&
+    pergunta2 === "+ 51.000" &&
+    pergunta3 === "Não" &&
+    pergunta4.includes("Online") &&
+    pergunta4.includes("Ouro Moderno Presencial") &&
+    pergunta4.includes("NR")
+  ) {
+    return (
+      <>
+        <h1>Proposta Taylor +51.000 habitantes</h1>
+        <div className="Linha-combos"></div>
+        <p>Ouro Moderno Presencial online: R$ 599,00.</p>
+        <p>Cursos Online: R$ 399,00.</p>
+        <p>Cursos NR: R$ 399,00.</p>
+        <p>Exclusividade: O plano não inclui direito a exclusividade.</p>
+        <p>Total: R$ 1.397,00.</p>
+        <div className="Linha-combos2"></div>
+        <button className="botãocombos">Compartilhar</button>
+      </>
+    );
+  }
+  if (
+    pergunta1 === "Sim" &&
+    pergunta2 === "Até 50.000" &&
+    pergunta3 === "Sim" &&
+    pergunta4.includes("Online") &&
+    pergunta4.includes("Ouro Moderno Presencial")
+  ) {
+    return (
+      <>
+        <h1>Proposta Taylor até 50.000 habitantes</h1>
+        <div className="Linha-combos"></div>
+        <p>Ouro Moderno Presencial online: R$ 499,00.</p>
+        <p>Cursos Online: R$ 299,00.</p>
+        <p>Exclusividade: R$ 199,00.</p>
+        <p>Total: R$ 997,00.</p>
+        <div className="Linha-combos2"></div>
+        <button className="botãocombos">Compartilhar</button>
+      </>
+    );
+  }
+  if (
+    pergunta1 === "Sim" &&
+    pergunta2 === "Até 50.000" &&
+    pergunta3 === "Não" &&
+    pergunta4.includes("Online") &&
+    pergunta4.includes("Ouro Moderno Presencial")
+  ) {
+    return (
+      <>
+        <h1>Proposta Taylor até 50.000 habitantes</h1>
+        <div className="Linha-combos"></div>
+        <p>Ouro Moderno Presencial online: R$ 499,00.</p>
+        <p>Cursos Online: R$ 299,00.</p>
+        <p>Exclusividade: O plano não inclui direito a exclusividade.</p>
+        <p>Total: R$ 798,00.</p>
+        <div className="Linha-combos2"></div>
+        <button className="botãocombos">Compartilhar</button>
       </>
     );
   }
@@ -320,7 +536,85 @@ else if (
       </>
     );
   }
+  if (
+    pergunta1 === "Sim" &&
+    pergunta2 === "Até 50.000" &&
+    pergunta3 === "Não" &&
+    pergunta4.includes("Online") &&
+    pergunta4.includes("Ouro Moderno Presencial")
+  ) {
+    return (
+      <>
+        <h1>Proposta Taylor até 50.000 habitantes</h1>
+        <div className="Linha-combos"></div>
+        <p>Ouro Moderno Presencial online: R$ 499,00.</p>
+        <p>Cursos Online: R$ 299,00.</p>
+        <p>Exclusividade: O plano não inclui direito a exclusividade.</p>
+        <p>Total: R$ 798,00.</p>
+        <div className="Linha-combos2"></div>
+        <button className="botãocombos">Compartilhar</button>
+      </>
+    );
+  }
   else if (
+    pergunta1 === "Sim" &&
+    pergunta2 === "Até 50.000" &&
+    pergunta3 === "Sim" &&
+    pergunta4.includes("Ouro Moderno Presencial")
+  ) { 
+    return (
+      <>
+      <h1>Proposta Taylor 50.000 habitantes</h1>
+      <div className="Linha-combos"></div>
+      <p>Ouro Moderno Presencial: R$ 499,00.</p>
+      <p>Exclusividade: R$ 199,00.</p>
+      <p>Total: R$ 698,00.</p>
+      <div className="Linha-combos2"></div>
+      <button className="botãocombos">Compartilhar</button>
+      </>
+    );
+  }
+  if (
+    pergunta1 === "Sim" &&
+    pergunta2 === "+ 51.000" &&
+    pergunta3 === "Sim" &&
+    pergunta4.includes("Online") &&
+    pergunta4.includes("Ouro Moderno Presencial")
+  ) {
+    return (
+      <>
+        <h1>Proposta Taylor +51.000 habitantes</h1>
+        <div className="Linha-combos"></div>
+        <p>Ouro Moderno Presencial online: R$ 599,00.</p>
+        <p>Cursos Online: R$ 399,00.</p>
+        <p>Exclusividade: O plano não inclui direito a exclusividade.</p>
+        <p>Total: R$ 998,00.</p>
+        <div className="Linha-combos2"></div>
+        <button className="botãocombos">Compartilhar</button>
+      </>
+    );
+  }
+  if (
+    pergunta1 === "Sim" &&
+    pergunta2 === "+ 51.000" &&
+    pergunta3 === "Não" &&
+    pergunta4.includes("Online") &&
+    pergunta4.includes("Ouro Moderno Presencial")
+  ) {
+    return (
+      <>
+     <h1>Proposta Taylor +51.000 habitantes</h1>
+        <div className="Linha-combos"></div>
+        <p>Ouro Moderno Presencial online: R$ 599,00.</p>
+        <p>Cursos Online: R$ 399,00.</p>
+        <p>Exclusividade: O plano não inclui direito a exclusividade.</p>
+        <p>Total: R$ 998,00.</p>
+        <div className="Linha-combos2"></div>
+        <button className="botãocombos">Compartilhar</button>
+      </>
+    );
+  }
+    else if (
     pergunta1 === "Sim" &&
     pergunta2 === "+ 51.000" &&
     pergunta3 === "Não" &&
@@ -338,7 +632,7 @@ else if (
       </>
     );
   }
-  else if (
+    else if (
     pergunta1 === "Sim" &&
     pergunta2 === "+ 51.000" &&
     pergunta3 === "Sim" &&
@@ -356,31 +650,208 @@ else if (
       </>
     );
   }
-   if (
+  else if (
+    pergunta1 === "Sim" &&
+    pergunta2 === "Até 30.000" &&
+    pergunta3 === "Sim" &&
+    pergunta4.includes("Ouro Moderno Presencial") &&
+    pergunta4.includes("Online") &&
+    pergunta4.includes("NR") &&
+    pergunta4.includes("Inglês")
+  ) { 
+    return (
+      <>
+      <h1>Proposta combo 30.000 habitantes</h1>
+      <div className="Linha-combos"></div>
+      <p>Ouro Moderno Presencial: R$ 499,00.</p>
+      <p>Cursos Online: R$ 299,00.</p>
+      <p>Cursos de Inglês: R$ 299,00.</p>
+      <p>Cursos de NR's: R$ 299,00.</p>
+      <p>Total: R$ 1.396,00.</p>
+      <p>Desconto Habitantes: 50% de desconto.</p>
+      <p>Exclusividade: R$ 149,00.</p>
+      <p>Total com desconto: R$ 818,00.</p>
+      <div className="Linha-combos2"></div>
+      <button className="botãocombos">Compartilhar</button>
+      </>
+    );
+} 
+  else if (
+    pergunta1 === "Sim" &&
+    pergunta2 === "Até 30.000" &&
+    pergunta3 === "Sim" &&
+    pergunta4.includes("Online") &&
+    pergunta4.includes("Ouro Moderno Presencial") &&
+    pergunta4.includes("NR")
+  ) {
+    return (
+      <>
+        <h1>Proposta Taylor até 30.000 habitantes</h1>
+        <div className="Linha-combos"></div>
+        <p>Ouro Moderno Presencial online: R$ 399,00.</p>
+        <p>Cursos Online: R$ 199,00.</p>
+        <p>Cursos NR: R$ 199,00.</p>
+        <p>Exclusividade: R$ 149,00.</p>
+        <p>Total: R$ 946,00.</p>
+        <div className="Linha-combos2"></div>
+        <button className="botãocombos">Compartilhar</button>
+      </>
+    );
+  }
+  if (
+    pergunta1 === "Sim" &&
+    pergunta2 === "Até 30.000" &&
+    pergunta3 === "Sim" &&
+    pergunta4.includes("Online") &&
+    pergunta4.includes("Ouro Moderno Presencial")
+  ) {
+    return (
+      <>
+        <h1>Proposta Taylor até 30.000 habitantes</h1>
+        <div className="Linha-combos"></div>
+        <p>Ouro Moderno Presencial online: R$ 399,00.</p>
+        <p>Cursos Online: R$ 199,00.</p>
+        <p>Exclusividade: R$ 149,00.</p>
+        <p>Total: R$ 749,00.</p>
+        <div className="Linha-combos2"></div>
+        <button className="botãocombos">Compartilhar</button>
+      </>
+    );
+  }
+  else if (
     pergunta1 === "Sim" &&
     pergunta2 === "Até 30.000" &&
     pergunta3 === "Não" &&
     pergunta4.includes("Ouro Moderno Presencial") &&
-    pergunta4.includes("Online")
+    pergunta4.includes("Online") &&
+    pergunta4.includes("NR") &&
+    pergunta4.includes("Inglês")
   ) { 
     return (
       <>
-      <h1>Proposta Taylor 10.000 habitantes</h1>
+      <h1>Proposta combo 30.000 habitantes</h1>
       <div className="Linha-combos"></div>
-      <p>Ouro Moderno Presencial: R$ 299,00.</p>
-      <p>Cursos Online: R$ 99,00.</p>
+      <p>Ouro Moderno Presencial: R$ 499,00.</p>
+      <p>Cursos Online: R$ 299,00.</p>
+      <p>Cursos de Inglês: R$ 299,00.</p>
+      <p>Cursos de NR's: R$ 299,00.</p>
+      <p>Total: R$ 1.396,00.</p>
+      <p>Desconto Habitantes: 50% de desconto.</p>
       <p>Exclusividade: O plano não inclui direito a exclusividade.</p>
-      <p>Total: R$ 398,00.</p>
+      <p>Total com desconto: R$ 699,00.</p>
+      <div className="Linha-combos2"></div>
+      <button className="botãocombos">Compartilhar</button>
+      </>
+    );
+} 
+  if (
+    pergunta1 === "Sim" &&
+    pergunta2 === "Até 30.000" &&
+    pergunta3 === "Não" &&
+    pergunta4.includes("Online") &&
+    pergunta4.includes("Ouro Moderno Presencial") &&
+    pergunta4.includes("NR")
+  ) {
+    return (
+      <>
+        <h1>Proposta Taylor até 30.000 habitantes</h1>
+        <div className="Linha-combos"></div>
+        <p>Ouro Moderno Presencial online: R$ 399,00.</p>
+        <p>Cursos Online: R$ 199,00.</p>
+        <p>Cursos NR: R$ 199,00.</p>
+        <p>Exclusividade: O plano não inclui direito a exclusividade.</p>
+        <p>Total: R$ 797,00.</p>
+        <div className="Linha-combos2"></div>
+        <button className="botãocombos">Compartilhar</button>
+      </>
+    );
+  }
+  if (
+    pergunta1 === "Sim" &&
+    pergunta2 === "Até 30.000" &&
+    pergunta3 === "Não" &&
+    pergunta4.includes("Online") &&
+    pergunta4.includes("Ouro Moderno Presencial")
+  ) {
+    return (
+      <>
+        <h1>Proposta Taylor até 30.000 habitantes</h1>
+        <div className="Linha-combos"></div>
+        <p>Ouro Moderno Presencial: R$ 399,00.</p>
+        <p>Cursos Online: R$ 199,00.</p>
+        <p>Exclusividade: O plano não inclui direito a exclusividade.</p>
+        <p>Total: R$ 598,00.</p>
+        <div className="Linha-combos2"></div>
+        <button className="botãocombos">Compartilhar</button>
+      </>
+    );
+  }
+  
+  else if (
+    pergunta1 === "Sim" &&
+    pergunta2 === "Até 30.000" &&
+    pergunta3 === "Sim" &&
+    pergunta4.includes("Ouro Moderno Presencial")
+  ) { 
+    return (
+      <>
+      <h1>Proposta Taylor 30.000 habitantes</h1>
+      <div className="Linha-combos"></div>
+      <p>Ouro Moderno Presencial: R$ 399,00.</p>
+      <p>Exclusividade: R$ 149,00.</p>
+      <p>Total: R$ 548,00.</p>
       <div className="Linha-combos2"></div>
       <button className="botãocombos">Compartilhar</button>
       </>
     );
   }
-
-
+    else if (
+    pergunta1 === "Sim" &&
+    pergunta2 === "Até 30.000" &&
+    pergunta3 === "Não" &&
+    pergunta4.includes("Ouro Moderno Presencial")
+  ) { 
+    return (
+      <>
+      <h1>Proposta Taylor 30.000 habitantes</h1>
+      <div className="Linha-combos"></div>
+      <p>Ouro Moderno Presencial: R$ 399,00.</p>
+      <p>Exclusividade: O plano não inclui direito a exclusividade.</p>
+      <p>Total: R$ 399,00.</p>
+      <div className="Linha-combos2"></div>
+      <button className="botãocombos">Compartilhar</button>
+      </>
+    );
+  }
+  else if (
+    pergunta1 === "Sim" &&
+    pergunta2 === "Até 30.000" &&
+    pergunta3 === "Não" &&
+    pergunta4.includes("Ouro Moderno Presencial") &&
+    pergunta4.includes("Online") &&
+    pergunta4.includes("NR") &&
+    pergunta4.includes("Inglês")
+  ) { 
+    return (
+      <>
+      <h1>Proposta combo 30.000 habitantes</h1>
+      <div className="Linha-combos"></div>
+      <p>Ouro Moderno Presencial: R$ 499,00.</p>
+      <p>Cursos Online: R$ 299,00.</p>
+      <p>Cursos de Inglês: R$ 299,00.</p>
+      <p>Cursos de NR's: R$ 299,00.</p>
+      <p>Total: R$ 1.396,00.</p>
+      <p>Desconto Habitantes: 50% de desconto.</p>
+      <p>Exclusividade: O plano não inclui direito a exclusividade.</p>
+      <p>Total com desconto: R$ 699,00.</p>
+      <div className="Linha-combos2"></div>
+      <button className="botãocombos">Compartilhar</button>
+      </>
+    );
+} 
+  
 
   }
-
 
   /*///////////////// Respostas para Não é escola física ////////////////*/
 
@@ -446,42 +917,55 @@ function determinarMensagem2() {
   return null; 
 }
 
- 
 /*///////////////// Funções comportamento botões /*//////////////////////
-
 
 function atualizarOpcoes(pergunta, opcao) {
   if (pergunta === "pergunta1" && opcao === "Não") {
     setOpcoesSelecionadas({
       pergunta1: "Não",
-      pergunta2: "",  
-      pergunta3: "",  
-      pergunta4: [],  
+      pergunta2: "",
+      pergunta3: "",
+      pergunta4: [],
     });
-
+    setNrDesabilitado(true);
+    setInglesDesabilitado(true);
+    setOuroModernoPresencialSelecionado(false);
   } else if (pergunta === "pergunta1" && opcao === "Sim") {
     setOpcoesSelecionadas({
       ...opcoesSelecionadas,
       pergunta1: "Sim",
     });
-
   } else if (pergunta === "pergunta3" && opcao === "Não") {
     setOpcoesSelecionadas({
       ...opcoesSelecionadas,
-      pergunta3: "Não",  
+      pergunta3: "Não",
     });
-
   } else if (pergunta === "pergunta4") {
-    if (opcoesSelecionadas.pergunta4.includes(opcao)) {
-      const updatedPergunta4 = opcoesSelecionadas.pergunta4.filter((item) => item !== opcao);
+    if (opcao === "Ouro Moderno Presencial") {
+      if (opcoesSelecionadas.pergunta4.includes("Ouro Moderno Presencial")) {
+        setOuroModernoPresencialSelecionado(false);
+        setOpcoesSelecionadas((prevState) => ({
+          ...prevState,
+          pergunta4: [],
+        }));
+        setNrDesabilitado(true);
+        setInglesDesabilitado(true);
+      } else {
+        setOuroModernoPresencialSelecionado(true);
+        setNrDesabilitado(false);
+        setInglesDesabilitado(false);
+        setOpcoesSelecionadas({
+          ...opcoesSelecionadas,
+          pergunta4: [opcao],
+        });
+      }
+    } else {
+      const updatedPergunta4 = opcoesSelecionadas.pergunta4.includes(opcao)
+        ? opcoesSelecionadas.pergunta4.filter((item) => item !== opcao)
+        : [...opcoesSelecionadas.pergunta4, opcao];
       setOpcoesSelecionadas({
         ...opcoesSelecionadas,
         pergunta4: updatedPergunta4,
-      });
-    } else {
-      setOpcoesSelecionadas({
-        ...opcoesSelecionadas,
-        pergunta4: [...opcoesSelecionadas.pergunta4, opcao],
       });
     }
   } else {
@@ -491,6 +975,7 @@ function atualizarOpcoes(pergunta, opcao) {
     });
   }
 }
+
 
   return (
     <>
@@ -573,17 +1058,17 @@ function atualizarOpcoes(pergunta, opcao) {
               Online
             </button>
             <button
-              onClick={() => atualizarOpcoes("pergunta4", "NR")}
-              className={`button ${opcoesSelecionadas.pergunta4.includes("NR") ? "selected" : ""}`}
-              disabled={opcoesSelecionadas.pergunta1 === "Não"}
-            >
-              NR
-            </button>
-            <button
-              onClick={() => atualizarOpcoes("pergunta4", "Inglês")}
-              className={`button ${opcoesSelecionadas.pergunta4.includes("Inglês") ? "selected" : ""}`}
-              disabled={opcoesSelecionadas.pergunta1 === "Não"}
-            >
+            onClick={() => atualizarOpcoes("pergunta4", "NR")}
+            className={`button ${opcoesSelecionadas.pergunta4.includes("NR") ? "selected" : ""}`}
+            disabled={!ouroModernoPresencialSelecionado}
+          >
+            NR
+          </button>
+          <button
+            onClick={() => atualizarOpcoes("pergunta4", "Inglês")}
+            className={`button ${opcoesSelecionadas.pergunta4.includes("Inglês") ? "selected" : ""}`}
+            disabled={!ouroModernoPresencialSelecionado}
+          >
               Inglês
             </button>
           </div>

@@ -1,10 +1,9 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import './index.css';
 import Combos from './assets/combos';
 
 
      {/* Opção Cursos unitários */}
-
 
   const coursesData = [
   { id: 1, name: "Desenvolvedor de Aplicativos para Android", price: 20 },
@@ -113,10 +112,6 @@ function App() {
 
   const handleOptionClick = (option) => {
     setSelectedOption(option);
-  
-{/*///////////////////////// Combos /////////////////////*/}
-
-    
 
 {/*///////////////////////// Gestor /////////////////////*/}
 
@@ -134,9 +129,7 @@ function App() {
     }
   };
 
-{/*///////////////////////// Opções /////////////////////*/}
-
-
+{/*///////////////////////// Opções Cursos /////////////////////*/}
 
     const courses20 = coursesData.filter(course =>
       course.price === 20 && course.name.toLowerCase().includes(searchTerm20.toLowerCase())
@@ -184,7 +177,7 @@ function App() {
         </div>
         <div className='right-div'></div>
     
-{/*///////////////////////// Opções /////////////////////*/}
+{/*///////////////////////// Opções Home /////////////////////*/}
 
         <label
           className={`label-option ${selectedOption === 'opcao1' ? 'selected' : ''}`}
